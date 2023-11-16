@@ -1,7 +1,7 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
 
-    const comment_message = document.querySelector('#blog-message').value.trim();
+    const comment_message = document.querySelector('#comment-message').value.trim();
 
     if (comment_message) {
         if (event.target.hasAttribute('data-id')) {

@@ -361,8 +361,21 @@ body {
   color: #1a1a1a;
 }
 
-header {
+header, .blog:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+
+.blog-border {
+  padding: 14px;
+  border: 2px solid #ccc;
+}
+
+.blog-border:not(:first-child) {
+  border-top: 3px solid #ccc;
+}
+
+.blog-border:not(:last-child) {
+  border-bottom: 3px solid #ccc;
 }
 
 h1,
