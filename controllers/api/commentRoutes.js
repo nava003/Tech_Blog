@@ -16,7 +16,7 @@ router.get('/:id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 router.post('/', withAuth, async (req, res) => {
     try {
@@ -30,4 +30,6 @@ router.post('/', withAuth, async (req, res) => {
     } catch (err) {
         res.status(400).json(err);
     }
-})
+});
+
+module.exports = router;
