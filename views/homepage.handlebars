@@ -1,0 +1,16 @@
+{{#if logged_in}}
+<!-- Loop over each blog post in the following array -->
+{{#each blogs as |blog| }}
+<div class="blog-container row mb-4 project">
+    <div class="col-md-6">
+        <h2>
+            <a href="/blog/{{blog.id}}">{{blog.blog_title}}</a>
+        </h2>
+        <p>Created by {{blog.user.username}} on {{format_date blog.date_created}}</p>
+    </div>
+    <div class="col-md-6">
+        <p>{{blog.blog_message}}</p>
+    </div>
+</div>
+{{/each}}
+{{/if}}

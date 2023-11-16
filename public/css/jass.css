@@ -361,6 +361,10 @@ body {
   color: #1a1a1a;
 }
 
+header {
+  border-bottom: 1px solid #ccc;
+}
+
 h1,
 h2,
 h3,
@@ -1165,14 +1169,9 @@ form [type='radio'] {
 }
 
 .container {
-  width: 85%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container.container-fluid {
-  width: 92%;
 }
 
 /* FLEX CONTENT */
