@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADN Tech Blog</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="flex-column justify-space-around">
+        <header class="display-flex justify-space-between align-center p-2">
+            <nav>
+                <!-- Render appropriate links based on IF handlebar condition -->
+                {{#if logged_in}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+                {{else}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/signlogin">Sign In/Login</a>
+                {{/if}}
+            </nav>
+            <h1>
+                <a href="/"><span role="img" aria-label="computer">💻</span> Our Tech Blog</a>
+            </h1>
+        </header>
+
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layouts -->
+            {{{ body }}}
+        </main>
+    </div>
+</body>
+
+</html>
