@@ -1,19 +1,22 @@
 const newCommentHandler = async (event) => {
     event.preventDefault();
 
-    const commentMessage = document.querySelector('#blog-message').value.trim();
+    const comment_message = document.querySelector('#blog-message').value.trim();
 
-    if (commentMessage) {
-        const response = await fetch('/api/comment', {
-            method: 'POST',
-            body: JSON.stringify({ commentMessage }),
-            headers: { 'Content-Type': 'application/json' }
-        });
+    if (comment_message) {
+        if (event.target.hasAttribute('data-id')) {
+            const blog_id = event.target.getAttribute('data-id');
+            const response = await fetch('/api/comment', {
+                method: 'POST',
+                body: JSON.stringify({ comment_message, blog_id }),
+                headers: { 'Content-Type': 'application/json' }
+            });
 
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert('Failed to create new blog post!');
+            if (response.ok) {
+                document.location.reload();
+            } else {
+                alert('Failed to create new blog post!');
+            }
         }
     }
 };
