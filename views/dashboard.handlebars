@@ -8,19 +8,19 @@
 <h2>List of your blog posts:</h2>
 
 {{#each blogs as |blog| }}
-<div class="blog-container row mb-4 blog">
-    <div class="col-md-6">
+<div class="blog-container col-mb-4 blog">
+    <div class="col-md">
         <input class="form-input" type="text" id="blog-title" value="{{blog.blog_title}}" />
-        <textarea class="form-input" id="blog-message" name="blog-message">{{blog.blog_message}}</textarea>
+        <textarea class="form-input" id="blog-message" name="blog-message" rows="5" cols="50">{{blog.blog_message}}</textarea>
     </div>
     <div class="form-group">
-        <button class="btn btn-sm btn-squared" data-id="{{blog.id}}">UPDATE</button>
-        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+        <button class="btn btn-sm btn-squared" id="edit-blog" data-id="{{blog.id}}">UPDATE</button>
+        <button class="btn btn-sm btn-danger" id="del-blog" data-id="{{blog.id}}">DELETE</button>
     </div>
 </div>
 {{/each}}
 {{else}}
-    <p>It's empty here! Let's make a post!</p>
+    <h2>It's pretty empty in here! Let's make a post!</h2>
 {{/if}}
 
 <h3>New Blog Post:</h3>
@@ -39,4 +39,4 @@
     </div>
 </form>
 
-<script src="./js/blog.js"></script>
+<script src="/js/blog.js"></script>

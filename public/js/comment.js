@@ -15,7 +15,7 @@ const newCommentHandler = async (event) => {
             if (response.ok) {
                 document.location.reload();
             } else {
-                alert('Failed to create new blog post!');
+                alert('Failed to create new comment!');
             }
         }
     }

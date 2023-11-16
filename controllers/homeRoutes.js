@@ -30,11 +30,13 @@ router.get('/blog/:id', withAuth, async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
             include: [
+                // { model: User, attributes: ['username'] },
+                // { model: Comment, attributes: ['comment_message', 'date_created', 'user_id'] }
                 { model: User },
-                { model: Comment }
+                { model: Comment, include: [ User ] }
             ]
         });
-        
+
         if (!blogData) {
             res.status(404).json({ message: 'No blog post found with this id!' })
         }
@@ -60,7 +62,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
         const user = userData.get({ plain: true });
 
-        res.render('user', {
+        res.render('dashboard', {
             ...user,
             logged_in: true
         });

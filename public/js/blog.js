@@ -60,5 +60,5 @@ const delBlogButtonHandler = async (event) => {
 };
 
 document.querySelector('.new-blog-form').addEventListener('submit', newBlogFormHandler);
-document.querySelector('.edit-blog-form').addEventListener('submit', updateBlogHandler);
-document.querySelector('.blog-list').addEventListener('click', delBlogButtonHandler);
+document.querySelector('#edit-blog').addEventListener('click', updateBlogHandler);
+document.querySelector('#del-blog').addEventListener('click', delBlogButtonHandler);

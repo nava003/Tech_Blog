@@ -11,20 +11,21 @@
     <h2>Comments:</h2>
     {{#if comments.length}}
         {{#each comments as |comment| }}
-            <p>{{comment.user_id.username}} said on {{format_date comment.date_created}}</p>
-            <p>{{comment.comment_message}}</p>
+            <div class="comment-container">
+                <p>{{user.username}} said on {{format_date comment.date_created}}</p>
+                <p>{{comment.comment_message}}</p>
+            </div>
         {{/each}}
     {{else}}
         <p>No comments yet! Be the first to comment!</p>
     {{/if}}
 
     <div class="form-group">
-        <label for="comment-message">message:</label>
-        <textarea class="form-input" id="comment-message" name="comment-message"></textarea>
+        <textarea class="form-input" id="comment-message" name="comment-message" rows="3" cols="40"></textarea>
     </div>
-        <div class="form-group">
-        <button type="submit" class="btn btn-primary" data-id="{{id}}">Comment!</button>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="new-comment-button" data-id="{{id}}">Comment!</button>
     </div>
 </div>
 
-<script src="./js/comment.js"></script>
+<script src="/js/comment.js"></script>
