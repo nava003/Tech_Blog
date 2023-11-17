@@ -62,3 +62,20 @@ The following animation demonstrates the application functionality:
 ![14-mvc-homework-demo-01](https://github.com/nava003/ADN_Tech_Blog/assets/32070635/c513e2f6-a8cb-4ff8-919c-14a1c4ad98fb)
 
 ## Student Result
+Deployed Heroku Version: https://adn-tech-blog-7377fb8f6d95.herokuapp.com
+
+Initial view of the application when not logged in:
+
+![MVC_C14_IMG1](https://github.com/nava003/ADN_Tech_Blog/assets/32070635/50c5ba18-525f-4bfb-bdb6-ea86d28ba6b2)
+
+Viewing list of blog posts after signing in:
+
+![MVC_C14_IMG2](https://github.com/nava003/ADN_Tech_Blog/assets/32070635/9e584be4-ef6d-4516-a2a8-721f66d8b50f)
+
+Viewing a single blog post:
+
+![MVC_C14_IMG3](https://github.com/nava003/ADN_Tech_Blog/assets/32070635/716c73e5-31cd-4703-9821-8616f25dfc55)
+
+Viewing a user's dashboard and list of posts they have created, with options to update or delete the post:
+
+![MVC_C14_IMG4](https://github.com/nava003/ADN_Tech_Blog/assets/32070635/e17b60cb-3c60-424b-9571-f81a2fa32766)
