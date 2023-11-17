@@ -390,6 +390,7 @@ header, .blog:not(:last-child) {
 }
 
 .blog-border:first-of-type {
+  width: 50em;
   border: 3px solid #ccc;
 }
 

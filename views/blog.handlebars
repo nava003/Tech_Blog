@@ -1,4 +1,4 @@
-<div class="col-md blog-border">
+<div class="blog-border">
     <h2>{{blog_title}}</h2>
     <p>Created by {{user.username}} on {{format_date date_created}}</p>
 
@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="col-md-6 blog-border">
+<div class="blog-border">
     <h2>Comments:</h2>
     {{#if comments.length}}
         {{#each comments as |comment| }}
